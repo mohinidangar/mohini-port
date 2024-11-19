@@ -1,10 +1,7 @@
-// Simple JavaScript to handle navigation smooth scrolling (optional)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Change background color for the About section when the button is clicked
+document.getElementById("change-bg-btn").addEventListener("click", function() {
+    const aboutSection = document.getElementById("about");
+    const randomColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+    aboutSection.style.backgroundColor = randomColor;
 });
+
